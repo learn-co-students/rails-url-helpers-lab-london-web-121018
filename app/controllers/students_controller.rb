@@ -6,6 +6,12 @@ class StudentsController < ApplicationController
   end
 
   def show
+    set_student
+  end
+
+  def activate
+    set_student.set_a
+    redirect_to student_path(set_student)
   end
 
   private
